@@ -3,7 +3,7 @@
     /* Base Options: */
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "target": "ES2023",
+    "target": "ES2024",
     "allowJs": true,
     "resolveJsonModule": true,
     "moduleDetection": "force",
@@ -18,7 +18,9 @@
     "module": "NodeNext",
     "outDir": "dist",
     "sourceMap": true,
+    "rootDir": "src",
     /* If your code doesn't run in the DOM: */
     "lib": ["ES2023"]
-  }
+  },
+  "exclude": ["*.js", "dist"]
 }
