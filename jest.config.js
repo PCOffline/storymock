@@ -1,18 +1,18 @@
-import { createDefaultEsmPreset } from "ts-jest";
+import { createDefaultEsmPreset } from 'ts-jest';
 
 const defaultEsmPreset = createDefaultEsmPreset();
 
 /** @type {import('ts-jest').JestConfigWithTsJest} **/
 export default {
   ...defaultEsmPreset,
-  testEnvironment: "node",
+  testEnvironment: 'node',
   moduleNameMapper: {
-    "^(\\.{1,2}/.*)\\.js$": "$1",
+    '^(\\.{1,2}/.*)\\.js$': '$1',
   },
-  extensionsToTreatAsEsm: [".ts"],
+  extensionsToTreatAsEsm: ['.ts'],
   transform: {
-    "^.+\\.[tj]sx?$": [
-      "ts-jest",
+    '^.+\\.[tj]sx?$': [
+      'ts-jest',
       {
         useESM: true,
       },

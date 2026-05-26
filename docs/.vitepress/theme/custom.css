@@ -1,0 +1,80 @@
+/* Brand colors — a vibrant purple/indigo palette */
+:root {
+  --vp-c-brand-1: #7c3aed;
+  --vp-c-brand-2: #6d28d9;
+  --vp-c-brand-3: #5b21b6;
+  --vp-c-brand-soft: rgba(124, 58, 237, 0.14);
+
+  /* Slightly tighter content width for readability */
+  --vp-layout-max-width: 1440px;
+}
+
+.dark {
+  --vp-c-brand-1: #a78bfa;
+  --vp-c-brand-2: #8b5cf6;
+  --vp-c-brand-3: #7c3aed;
+  --vp-c-brand-soft: rgba(167, 139, 250, 0.14);
+}
+
+/* Hero section polish */
+.VPHero .name {
+  background: linear-gradient(135deg, var(--vp-c-brand-1) 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.VPHero .text {
+  font-size: 3rem !important;
+  line-height: 1.2 !important;
+}
+
+/* Feature cards — subtle hover lift */
+.VPFeature {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.VPFeature:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.dark .VPFeature:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Code blocks — slightly rounder */
+div[class*="language-"] {
+  border-radius: 10px;
+}
+
+/* Custom container refinements */
+.custom-block {
+  border-radius: 10px;
+}
+
+.custom-block.tip {
+  border-color: var(--vp-c-brand-1);
+}
+
+.custom-block.tip .custom-block-title {
+  color: var(--vp-c-brand-1);
+}
+
+/* Sidebar active item emphasis */
+.VPSidebarItem.is-active > .item .link > .text {
+  font-weight: 600;
+}
+
+/* Nicer inline code */
+:not(pre) > code {
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+/* Smooth page transitions */
+.VPContent {
+  transition: opacity 0.2s ease;
+}
